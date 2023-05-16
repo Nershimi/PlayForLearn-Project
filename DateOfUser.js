@@ -1,3 +1,4 @@
+const MINIMUM_AGE_THRESHOLD = 13;
 /**
  * return - void
  * The function getting date element covert to JavaScript Date Object.
@@ -17,7 +18,7 @@ function CheckAgeOverThirteen() {
   ) {
     age--;
   }
-  if (age <= 13) {
+  if (age <= MINIMUM_AGE_THRESHOLD) {
     errorMassageOfDate.innerHTML = "גיל לא תואם את הנדרש <br>";
   } else {
     errorMassageOfDate.innerHTML = "";

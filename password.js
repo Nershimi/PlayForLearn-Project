@@ -1,3 +1,6 @@
+const MIN_PASSWORD_LENGTH = 8;
+const MAX_PASSWORD_LENGTH = 20;
+
 /**
  * Create let that holding value of the element pw1 of the type password
  * and change the type form password to text and backward
@@ -57,7 +60,10 @@ function isPasswordValid(pass) {
  */
 function isLengthOfPasswordValid(password) {
   let lenOfPassword = password.length;
-  if (lenOfPassword < 8 || lenOfPassword > 20) {
+  if (
+    lenOfPassword < MIN_PASSWORD_LENGTH ||
+    lenOfPassword > MAX_PASSWORD_LENGTH
+  ) {
     return false;
   }
   return true;
