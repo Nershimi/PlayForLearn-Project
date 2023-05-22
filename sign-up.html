@@ -33,109 +33,117 @@
     <p>
       עם המשתמש משלכם תוכלו להתחבר ולשחק במגוון נושאים ותוך כדי להמשיך ללמוד
     </p>
-    <table>
-      <tbody>
-        <tr>
-          <td>
-            <label for="email">אימייל</label>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span id="emailNotValid"></span>
-            <input
-              type="email"
-              size="42"
-              name="username"
-              id="username"
-              value
-              onkeyup="isEmailValid()"
-            />
-          </td>
-        </tr>
+    <form action="">
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <label for="email">אימייל</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span id="emailNotValid"></span>
+              <input
+                type="email"
+                size="42"
+                name="username"
+                id="username"
+                value
+                onkeyup="isEmailValid()"
+                autofocus
+                required
+              />
+            </td>
+          </tr>
 
-        <tr>
-          <td>
-            <label for="password">סיסמה</label>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span id="passwordNotValid"></span>
-            <input
-              type="password"
-              size="42"
-              name="pw1"
-              id="pw1"
-              value
-              onkeyup="isPasswordValid('pw1')"
-            />
-            <button onclick="showAndHidePassword('pw1')">הצג/הסתר</button>
-          </td>
-        </tr>
+          <tr>
+            <td>
+              <label for="password">סיסמה</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span id="passwordNotValid"></span>
+              <input
+                type="password"
+                size="42"
+                name="pw1"
+                id="pw1"
+                value
+                onkeyup="isPasswordValid('pw1')"
+                required
+              />
+              <button onclick="showAndHidePassword('pw1')">הצג/הסתר</button>
+            </td>
+          </tr>
 
-        <tr>
-          <td>
-            <label for="password">אימות סיסמה</label>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span id="errorMassageNotEqualsTwoPw"></span>
-            <input
-              type="password"
-              size="42"
-              name="pw2"
-              id="pw2"
-              value
-              onkeyup="compareFirstAndSecondPw('pw1', 'pw2')"
-            />
-          </td>
-        </tr>
+          <tr>
+            <td>
+              <label for="password">אימות סיסמה</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span id="errorMassageNotEqualsTwoPw"></span>
+              <input
+                type="password"
+                size="42"
+                name="pw2"
+                id="pw2"
+                value
+                onkeyup="compareFirstAndSecondPw('pw1', 'pw2')"
+                required
+              />
+            </td>
+          </tr>
 
-        <tr>
-          <td>
-            <label for="text">שם פרטי</label>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="text" size="42" name="firstName" value />
-          </td>
-        </tr>
+          <tr>
+            <td>
+              <label for="text">שם פרטי</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="text" size="42" name="firstName" value required />
+            </td>
+          </tr>
 
-        <tr>
-          <td>
-            <label for="text">שם משפחה</label>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="text" size="42" name="lastName" value />
-          </td>
-        </tr>
+          <tr>
+            <td>
+              <label for="text">שם משפחה</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="text" size="42" name="lastName" value required />
+            </td>
+          </tr>
 
-        <tr>
-          <td>
-            <label for="Date">תאריך לידה</label>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span id="errorMassageNotRightAge"></span>
-            <input
-              type="date"
-              size="42"
-              name="dateOfBirth"
-              id="dateOfBirth"
-              value
-              onchange="CheckAgeOverThirteen()"
-            />
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <br />
-    <button type="submit" onclick="">צור משתמש</button>
+          <tr>
+            <td>
+              <label for="Date">תאריך לידה</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span id="errorMassageNotRightAge"></span>
+              <input
+                type="date"
+                size="42"
+                name="dateOfBirth"
+                id="dateOfBirth"
+                max="2023-01-01"
+                value
+                onchange="CheckAgeOverThirteen()"
+                required
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <button type="submit" onclick="">צור משתמש</button>
+    </form>
   </body>
 </html>
