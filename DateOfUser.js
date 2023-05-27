@@ -20,7 +20,9 @@ function CheckAgeOverThirteen() {
   }
   if (age <= MINIMUM_AGE_THRESHOLD) {
     errorMassageOfDate.innerHTML = "הרשיום מוגבל לגיל 13 ומעלה <br>";
+    return false;
   } else {
     errorMassageOfDate.innerHTML = "";
+    return true;
   }
 }

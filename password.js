@@ -18,15 +18,16 @@ function showAndHidePassword(id) {
  * else errorMassageNotEqualsTwoPw = password are not match
  */
 function compareFirstAndSecondPw(pw1, pw2) {
-  let firstPw = document.getElementById(pw1).value;
-  let secondPw = document.getElementById(pw2).value;
+  // TODO need to check why it's not jump an Error
   let errorElement = document.getElementById("errorMassageNotEqualsTwoPw");
-  if (firstPw != secondPw) {
+  if (pw1 != pw2) {
     if (secondPw != "") {
       errorElement.innerHTML = "הסיסמאות אינן תואמות <br>";
+      return false;
     }
   } else {
     errorElement.innerHTML = "";
+    return true;
   }
 }
 
@@ -48,9 +49,11 @@ function isPasswordValid(pass) {
   let isContainSpace = isThereNoSpace(firstPw);
   if (isContainUpper && isContainLower && isContainSpace && isLengthValid) {
     errorPassNotValid.innerHTML = "";
+    return true;
   } else {
     errorPassNotValid.innerHTML =
       "נדרש לכתוב סיסמה הכוללת אות גדולה, אות קטנה, ומספרים <br>";
+    return false;
   }
 }
 

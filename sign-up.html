@@ -4,17 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script async src="/Users/ner/Projects/PlayForLearn/password.js"></script>
+    <script async src="/Users/ner/Projects/PlayForLearn/DateOfUser.js"></script>
     <script
       async
-      src="/Users/ner/Documents/vs/PlayForLearn-Project/password.js"
+      src="/Users/ner/Projects/PlayForLearn/ValidateEmail.js"
     ></script>
     <script
       async
-      src="/Users/ner/Documents/vs/PlayForLearn-Project/DateOfUser.js"
-    ></script>
-    <script
-      async
-      src="/Users/ner/Documents/vs/PlayForLearn-Project/ValidateEmail.js"
+      src="/Users/ner/Projects/PlayForLearn/CreateAccount.js"
     ></script>
     <title>מסך הרשמה - משחקים כדי ללמוד</title>
     <style>
@@ -50,7 +48,7 @@
                 name="username"
                 id="username"
                 value
-                onkeyup="isEmailValid()"
+                onkeyup="isEmailValid('username')"
                 autofocus
                 required
               />
@@ -92,7 +90,7 @@
                 name="pw2"
                 id="pw2"
                 value
-                onkeyup="compareFirstAndSecondPw('pw1', 'pw2')"
+                onkeyup="compareFirstAndSecondPw('pw1','pw2')"
                 required
               />
             </td>
@@ -143,7 +141,12 @@
         </tbody>
       </table>
       <br />
-      <button type="submit" onclick="">צור משתמש</button>
+      <button
+        id="createAccountAction"
+        onclick="checkingAllParameters('pw1','pw2', 'username')"
+      >
+        צור משתמש
+      </button>
     </form>
   </body>
 </html>
