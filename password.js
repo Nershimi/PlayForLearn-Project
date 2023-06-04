@@ -20,8 +20,10 @@ function showAndHidePassword(id) {
 function compareFirstAndSecondPw(pw1, pw2) {
   // TODO need to check why it's not jump an Error
   let errorElement = document.getElementById("errorMassageNotEqualsTwoPw");
-  if (pw1 != pw2) {
-    if (secondPw != "") {
+  let pw1Val = document.getElementById(pw1).value;
+  let pw2Val = document.getElementById(pw2).value;
+  if (pw1Val != pw2Val) {
+    if(pw2Val.length > 0){
       errorElement.innerHTML = "הסיסמאות אינן תואמות <br>";
       return false;
     }
