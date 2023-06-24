@@ -4,23 +4,65 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      async
+      src="/Users/ner/Projects/PlayForLearn/myAccountList.js"
+    ></script>
     <title>Home page - play for learn</title>
     <style>
       body {
         background-image: url(/Users/ner/Documents/vs/PlayForLearn-Project/luxury-plain-green-gradient-abstract-studio-background-empty-room-with-space-your-text-picture.jpg);
       }
+      .listGetDown {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+      .listGetDown a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .show {
+        display: block;
+      }
+      .linksgameHomePage {
+        text-align: center;
+      }
     </style>
   </head>
   <body>
-    <a href="">Learn new definition </a>
-    <br />
-    <a href="">True or False </a>
-    <br />
-    <a href="">True or False - weak knowledge </a>
-    <br />
-    <a href="">Memory game </a>
-    <br />
-    <a href="">Add more definition </a>
-    <br />
+    <div class="myAccountList">
+      <button
+        onclick="showListOfMyAccount('myListDown')"
+        class="accountListBut"
+      >
+        המשתמש שלי
+      </button>
+      <div id="myListDown" class="listGetDown">
+        <a href="">הפרטים שלי</a>
+        <a href="">הגדרות אישיות</a>
+        <a href="">התנתקות</a>
+      </div>
+    </div>
+    <p id="userOnCorse">User on corse now</p>
+
+    <div id="gameLinks" class="linksgameHomePage">
+      <a href="">Learn new definition </a>
+      <br />
+      <a href="">True or False </a>
+      <br />
+      <a href="">True or False - weak knowledge </a>
+      <br />
+      <a href="">Memory game </a>
+      <br />
+      <a href="">Add more definition </a>
+      <br />
+    </div>
   </body>
 </html>
