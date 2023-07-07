@@ -8,99 +8,18 @@
       async
       src="/Users/ner/Projects/PlayForLearn/myAccountList.js"
     ></script>
+    <script
+      async
+      src="/Users/ner/Projects/PlayForLearn/OpenHiddenMenu.js"
+    ></script>
+    <link rel="stylesheet" href="myAccountButton.css" />
+    <link rel="stylesheet" href="gamesLinkHomeScreen.css" />
+    <link rel="stylesheet" href="RightMenuHidden.css" />
     <title>Home page - play for learn</title>
     <style>
       body {
         background-image: url(/Users/ner/Documents/vs/PlayForLearn-Project/luxury-plain-green-gradient-abstract-studio-background-empty-room-with-space-your-text-picture.jpg);
-      }
-      .listGetDown {
-        display: none;
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 160px;
-        overflow: auto;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-      }
-      .listGetDown a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
-      .show {
-        display: block;
-      }
-      #gameLinks {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      #gameLinks a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 350px;
-        height: 60px;
-        border: 2px solid black;
-        margin: 10px;
-        text-decoration: none;
-        color: black;
-        font-weight: bold;
-        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-          sans-serif;
-      }
-      #RightMenuOuter {
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 0;
-        background-color: #f1f1f1;
-        overflow-x: hidden;
-        transition: 0.3s;
-        z-index: 1;
-      }
-      #rightMenuInner {
-        padding: 16px;
-      }
-      #RightMenuToggle {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        cursor: pointer;
-        padding: 10px;
-        background-color: #ccc;
-        border-radius: 50%;
-        z-index: 2;
-      }
-      .menuToggle {
-        display: inline-block;
-        cursor: pointer;
-      }
-
-      .bar1,
-      .bar2,
-      .bar3 {
-        width: 35px;
-        height: 5px;
-        background-color: #333;
-        margin: 6px 0;
-        transition: 0.4s;
-      }
-
-      .change .bar1 {
-        transform: translate(0, 11px) rotate(-45deg);
-      }
-
-      .change .bar2 {
-        opacity: 0;
-      }
-
-      .change .bar3 {
-        transform: translate(0, -11px) rotate(45deg);
-      }
+      } 
     </style>
   </head>
   <body>
@@ -118,12 +37,11 @@
       </div>
     </div>
 
-    <div id="rightMenuOuter">
-      <div id="rightMenuToggle" class="menuToggle" onclick="changeToggle(this)">
+      <div id="rightMenuToggle" class="menuToggle" onclick="openAndCloseMenu()">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
-      </div>
+      </div id="menu">
       <div id="rightMenuInner">
         <br />
         <a target="_blank" href="">דף הבית</a>
@@ -134,7 +52,6 @@
         <a target="_top" href="">הוספת הגדרות חדשות</a>
         <a target="_top" href="">פנייה ליוצר</a>
       </div>
-    </div>
 
     <p id="userOnCorse">User on corse now</p>
 
@@ -150,26 +67,5 @@
       <a href="">Add more definition </a>
       <br />
     </div>
-
-    <script>
-      document
-        .getElementById("rightMenuToggle")
-        .addEventListener("click", openAndCloseMenu());
-      function openAndCloseMenu() {
-        let menuOuter = document.getElementById("rightMenuOuter");
-        let menuToggle = document.getElementById("rightMenuToggle");
-        if (menuOuter.style.width === "250px") {
-          menuOuter.style.width = "0";
-          menuToggle.style.right = "20px";
-        } else {
-          menuOuter.style.width = "250px";
-          menuToggle.style.right = "270px";
-        }
-      }
-
-      function changeToggle(x) {
-        x.classList.toggle("change");
-      }
-    </script>
   </body>
 </html>
