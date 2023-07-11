@@ -1,0 +1,22 @@
+#detailsBox{
+    margin-top: 66px;
+    text-align: right;
+}
+
+h4 {
+margin-bottom: 25px;
+}
+
+span{
+    background-color: aliceblue;
+    border-style: solid;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: 20px;
+    
+}
