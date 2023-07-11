@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en, he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      async
+      src="/Users/ner/Projects/PlayForLearn/myAccountList.js"
+    ></script>
+    <script
+      async
+      src="/Users/ner/Projects/PlayForLearn/OpenHiddenMenu.js"
+    ></script>
+    <link rel="stylesheet" href="myAccountButton.css" />
+    <link rel="stylesheet" href="RightMenuHidden.css" />
+    <title>למידה עצמית</title>
+  </head>
+  <body>
+     <div class="myAccountList">
+        <button
+          onclick="showListOfMyAccount('myListDown')"
+          class="accountListBut"
+        >
+          המשתמש שלי
+        </button>
+        <div id="myListDown" class="listGetDown">
+          <a href="">הפרטים שלי</a>
+          <a href="">הגדרות אישיות</a>
+          <a href="">התנתקות</a>
+        </div>
+      </div>
+  
+        <div id="rightMenuToggle" class="menuToggle" onclick="openAndCloseMenu()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div id="menu">
+        <div id="rightMenuInner">
+          <br />
+          <a target="_blank" href="">דף הבית</a>
+          <a target="_top" href="">לימוד עצמי</a>
+          <a target="_top" href="">משחק אמת או שקר</a>
+          <a target="_top" href="">משחק הזיכרון</a>
+          <a target="_top" href="">הפרטים שלי</a>
+          <a target="_top" href="">הוספת הגדרות חדשות</a>
+          <a target="_top" href="">פנייה ליוצר</a>
+        </div>
+        <div>
+            <h3>Definition(T)</h3>
+            <img src="" alt="Definition pic">
+            <span>Definition interpretation</span>
+
+            <div>How much I know this definition:</div>
+            
+            <div>
+                <button>Low</button>
+                <button>Middle</button>
+                <button>High</button>
+            </div>
+
+            <div>
+                <button>like</button>
+                <button>dislike</button>
+                <input type="text" placeholder="Write better option to the definition">
+            </div>
+        </div>
+  </body>
+</html>
