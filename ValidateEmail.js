@@ -6,14 +6,15 @@
  * to the user saying the email is not valid.
  */
 function isEmailValid(email) {
-  // let userEmail = document.getElementById("username").value;
-  let isEmailCorrect = mailFormatValid(email);
+  let userEmail = document.getElementById(email).value;
+  let isEmailCorrect = mailFormatValid(userEmail);
   let errorEmailNotCorrect = document.getElementById("emailNotValid");
+  errorEmailNotCorrect.innerHTML = "כתובת מייל לא חוקית <br>";
   if (isEmailCorrect) {
-    errorEmailNotCorrect.innerHTML = "";
+    errorEmailNotCorrect.style.display = "none";
     return true;
   } else {
-    errorEmailNotCorrect.innerHTML = "כתובת מייל לא חוקית <br>";
+    errorEmailNotCorrect.style.display = "block";
     return false;
   }
 }
