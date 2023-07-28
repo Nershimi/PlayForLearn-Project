@@ -14,6 +14,10 @@
       async
       src="/Users/ner/Projects/PlayForLearn/CreateAccount.js"
     ></script>
+    <script
+      async
+      src="/Users/ner/Projects/PlayForLearn/AuthenticationFirebase.js"
+    ></script>
     <title>מסך הרשמה - משחקים כדי ללמוד</title>
     <style>
       body {
@@ -50,7 +54,6 @@
                 onkeyup="isEmailValid('username')"
                 placeholder="example@domain.com"
                 autofocus
-                required
               />
             </td>
           </tr>
@@ -69,7 +72,7 @@
                 id="pw1"
                 value
                 onkeyup="isPasswordValid('pw1')"
-                required
+                
               />
               <button onclick="showAndHidePassword('pw1')">הצג/הסתר</button>
             </td>
@@ -90,7 +93,7 @@
                 id="pw2"
                 value
                 onkeyup="compareFirstAndSecondPw('pw1','pw2')"
-                required
+                
               />
             </td>
           </tr>
@@ -108,7 +111,7 @@
                 name="firstName"
                 value
                 placeholder="שם פרטי"
-                required
+                
               />
             </td>
           </tr>
@@ -126,7 +129,7 @@
                 name="lastName"
                 value
                 placeholder="שם משפחה"
-                required
+                
               />
             </td>
           </tr>
@@ -147,7 +150,7 @@
                 max="2023-01-01"
                 value
                 onchange="CheckAgeOverThirteen()"
-                required
+                
               />
             </td>
           </tr>
@@ -160,6 +163,7 @@
       >
         צור משתמש
       </button>
+      
     </form>
   </body>
 </html>
