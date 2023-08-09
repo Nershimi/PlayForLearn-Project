@@ -1,5 +1,6 @@
 #rightMenuInner {
   display: none;
+  width: 100px
 }
 #rightMenuInner a {
   margin-top: 20px;
