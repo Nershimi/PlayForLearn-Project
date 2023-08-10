@@ -3,8 +3,6 @@ import {
   getAuth,
   onAuthStateChanged,
 } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
-// import { getFirestore } from "firebase/firestore";
-
 
 const auth = getAuth(firebaseApp);
 onAuthStateChanged(auth, (user) => {
