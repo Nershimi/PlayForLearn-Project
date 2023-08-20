@@ -4,20 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script async src="/Users/ner/Projects/PlayForLearn/password.js"></script>
-    <script async src="/Users/ner/Projects/PlayForLearn/DateOfUser.js"></script>
-    <script
-      async
-      src="/Users/ner/Projects/PlayForLearn/ValidateEmail.js"
-    ></script>
-    <script
-      async
-      src="/Users/ner/Projects/PlayForLearn/CreateAccount.js"
-    ></script>
-    <script
-      async
-      src="/Users/ner/Projects/PlayForLearn/AuthenticationFirebase.js"
-    ></script>
+    <script async src="password.js"></script>
+    <script async src="PlayForLearn/DateOfUser.js"></script>
+    <script async src="PlayForLearn/ValidateEmail.js"></script>
+    <script async src="PlayForLearn/CreateAccount.js"></script>
+
     <title>מסך הרשמה - משחקים כדי ללמוד</title>
     <style>
       body {
@@ -27,7 +18,7 @@
   </head>
   <body>
     <br />
-    <a href="/Users/ner/Projects/PlayForLearn/sign-up.html">
+    <a href="PlayForLearn/sign-up.html">
       <h2>מסך הרשמה-משחקים כדי ללמוד</h2>
     </a>
     <br />
@@ -35,135 +26,76 @@
     <p>
       עם המשתמש משלכם תוכלו להתחבר ולשחק במגוון נושאים ותוך כדי להמשיך ללמוד
     </p>
-    <form action="">
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <label for="email">אימייל</label>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <span id="emailNotValid"></span>
-              <input
-                type="email"
-                size="42"
-                id="username"
-                value
-                onkeyup="isEmailValid('username')"
-                placeholder="example@domain.com"
-                autofocus
-              />
-            </td>
-          </tr>
 
-          <tr>
-            <td>
-              <label for="password">סיסמה</label>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <span id="passwordNotValid"></span>
-              <input
-                type="password"
-                size="42"
-                id="pw1"
-                value
-                onkeyup="isPasswordValid('pw1')"
-                
-              />
-              <button onclick="showAndHidePassword('pw1')">הצג/הסתר</button>
-            </td>
-          </tr>
+    <div>
+      <div>
+        <h4>אימייל</h4>
+        <span id="emailNotValid"></span>
+        <input
+          type="email"
+          size="42"
+          id="username"
+          value
+          onkeyup="isEmailValid('username')"
+          placeholder="example@domain.com"
+          autofocus
+        />
+      </div>
+      <div>
+        <h4>סיסמה</h4>
+        <span id="passwordNotValid"></span>
+        <input
+          type="password"
+          size="42"
+          id="pw1"
+          value
+          onkeyup="isPasswordValid('pw1')"
+        />
+        <button onclick="showAndHidePassword('pw1')">הצג/הסתר</button>
+      </div>
 
-          <tr>
-            <td>
-              <label for="password">אימות סיסמה</label>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <span id="errorMassageNotEqualsTwoPw"></span>
-              <input
-                type="password"
-                size="42"
-                name="pw2"
-                id="pw2"
-                value
-                onkeyup="compareFirstAndSecondPw('pw1','pw2')"
-                
-              />
-            </td>
-          </tr>
+      <div>
+        <h4>אימות סיסמה</h4>
+        <span id="errorMassageNotEqualsTwoPw"></span>
+        <input
+          type="password"
+          size="42"
+          name="pw2"
+          id="pw2"
+          value
+          onkeyup="compareFirstAndSecondPw('pw1','pw2')"
+        />
+      </div>
 
-          <tr>
-            <td>
-              <label for="text">שם פרטי</label>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <input
-                type="text"
-                size="42"
-                name="firstName"
-                value
-                placeholder="שם פרטי"
-                
-              />
-            </td>
-          </tr>
+      <div>
+        <h4>שם פרטי</h4>
+        <input
+          type="text"
+          size="42"
+          name="firstName"
+          value
+          placeholder="שם פרטי"
+        />
+      </div>
 
-          <tr>
-            <td>
-              <label for="text">שם משפחה</label>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <input
-                type="text"
-                size="42"
-                name="lastName"
-                value
-                placeholder="שם משפחה"
-                
-              />
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <label for="Date">תאריך לידה</label>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <span id="errorMassageNotRightAge"></span>
-              <input
-                type="date"
-                size="42"
-                name="dateOfBirth"
-                id="dateOfBirth"
-                max="2023-01-01"
-                value
-                onchange="CheckAgeOverThirteen()"
-                
-              />
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <br />
-      <button
-        id="createAccountAction"
-        onclick="CreateNewUser('pw1','pw2', 'username')"
-      >
-        צור משתמש
-      </button>
-      
-    </form>
+      <div>
+        <h4>שם משפחה</h4>
+        <input
+          type="text"
+          size="42"
+          name="lastName"
+          value
+          placeholder="שם משפחה"
+        />
+      </div>
+      <div>
+        <button
+          id="createAccountAction"
+          onclick="CreateNewUser('pw1','pw2', 'username')"
+        >
+          צור משתמש
+        </button>
+      </div>
+    </div>
   </body>
 </html>
