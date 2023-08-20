@@ -1,0 +1,20 @@
+{
+  "name": "playforlearn",
+  "version": "1.0.0",
+  "description": "This project aims to get people at university to learn definitions using card games.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^10.1.0",
+    "firebaseui": "^6.1.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.88.2",
+    "webpack-cil": "^0.0.1-security"
+  }
+}
