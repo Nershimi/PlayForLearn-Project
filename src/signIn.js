@@ -1,6 +1,7 @@
 import {
   getAuth,
   signInWithEmailAndPassword,
+  onAuthStateChanged,
 } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
 
 const auth = getAuth();
@@ -28,8 +29,26 @@ const loginEmailPassword = async () => {
   }
 };
 
-function showErrorLogin(){
-    errorSpan.style = "display: block"
+function showErrorLogin() {
+  errorSpan.style = "display: block";
 }
 
 btnLogin.addEventListener("click", loginEmailPassword);
+
+const monitorAuthState = async () => {
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      console.log(user);
+      showHomePage();
+    } else {
+      showLoginForm();
+      showErrorLogin();
+    }
+  });
+};
+
+monitorAuthState();
+
+function showHomePage() {
+  window.location.href = "HomePageScreen.html";
+}
