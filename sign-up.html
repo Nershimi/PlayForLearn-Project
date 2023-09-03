@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script async type="module" src="src/initializeApp.js"></script>
+    <script async type="module" src="src/signUp.js"></script>
     <script async src="password.js"></script>
-    <script async src="PlayForLearn/DateOfUser.js"></script>
-    <script async src="PlayForLearn/ValidateEmail.js"></script>
-    <script async src="PlayForLearn/CreateAccount.js"></script>
-
+    <script async src="DateOfUser.js"></script>
+    <script async src="ValidateEmail.js"></script>
     <title>מסך הרשמה - משחקים כדי ללמוד</title>
     <style>
       body {
@@ -17,7 +17,6 @@
     </style>
   </head>
   <body>
-    <br />
     <a href="PlayForLearn/sign-up.html">
       <h2>מסך הרשמה-משחקים כדי ללמוד</h2>
     </a>
@@ -89,12 +88,7 @@
         />
       </div>
       <div>
-        <button
-          id="createAccountAction"
-          onclick="CreateNewUser('pw1','pw2', 'username')"
-        >
-          צור משתמש
-        </button>
+        <button id="buttonCreateAccount">צור משתמש</button>
       </div>
     </div>
   </body>
