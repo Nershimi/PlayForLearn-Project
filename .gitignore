@@ -2,3 +2,25 @@ pp_of_template_for_screen.pptx
 screens of the game.pptx
 ~$screens of the game.pptx
 node_modules
+.firebaserc
+database-debug.log
+database.rules.json
+firebase.json
+firestore-debug.log
+firestore.indexes.json
+firestore.rules
+npm
+pubsub-debug.log
+storage.rules
+ui-debug.log
+webpack.config.js
+dist/bundle.js
+functions/.eslintrc.js
+functions/.gitignore
+functions/index.js
+functions/package.json
+nercodebase/.eslintrc.js
+nercodebase/.gitignore
+nercodebase/index.js
+nercodebase/package.json
+public/index.html
