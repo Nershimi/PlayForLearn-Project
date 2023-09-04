@@ -3,3 +3,23 @@ screens of the game.pptx
 ~$screens of the game.pptx
 node_modules
 initializeApp.js
+.firebaserc
+database-debug.log
+database.rules.json
+firebase-debug.log
+firebase.json
+firestore-debug.log
+firestore.indexes.json
+firestore.rules
+npm
+pubsub-debug.log
+storage.rules
+ui-debug.log
+webpack.config.js
+dist/bundle.js
+nercodebase/.eslintrc.js
+nercodebase/.gitignore
+nercodebase/index.js
+nercodebase/package-lock.json
+nercodebase/package.json
+public/index.html
