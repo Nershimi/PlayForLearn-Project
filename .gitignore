@@ -24,3 +24,5 @@ nercodebase/.gitignore
 nercodebase/index.js
 nercodebase/package.json
 public/index.html
+firebase-debug.log
+package-lock.json

@@ -2,7 +2,12 @@ import {
   getAuth,
   signInWithEmailAndPassword,
   onAuthStateChanged,
-} from "firebase/auth";
+} from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
+// import {
+//   getAuth,
+//   signInWithEmailAndPassword,
+//   onAuthStateChanged,
+// } from "firebase/auth";
 
 const auth = getAuth();
 
@@ -21,7 +26,7 @@ const loginEmailPassword = async () => {
       loginEmail,
       loginPassword
     );
-    console.log(userCredential.user);
+    console.log("User is login");
   } catch (error) {
     console.log(error);
     showErrorLogin();
@@ -41,7 +46,6 @@ const monitorAuthState = async () => {
       console.log(user);
       showHomePage();
     } else {
-      showLoginForm();
       showErrorLogin();
     }
   });

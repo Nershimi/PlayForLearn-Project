@@ -2,10 +2,10 @@
   "name": "playforlearn",
   "version": "1.0.0",
   "description": "This project aims to get people at university to learn definitions using card games.",
-  "main": "./src/initializeApp.js",
+  "main": "./index.js",
   "scripts": {
-    "build": "webpack --mode=development",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",

@@ -1,8 +1,13 @@
+// import {
+//   GoogleAuthProvider,
+//   getAuth,
+//   signInWithPopup,
+// } from "firebase/auth";
 import {
   GoogleAuthProvider,
   getAuth,
   signInWithPopup,
-} from "firebase/auth";
+} from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
 
 const provider = new GoogleAuthProvider();
 
