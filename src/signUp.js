@@ -8,23 +8,36 @@ const auth = getAuth();
 const btnSignUp = document.getElementById("buttonCreateAccount");
 const txtEmail = document.getElementById("username");
 const txtPassword = document.getElementById("pw1");
+const secTxtPassword = document.getElementById("pw2");
 
 const createAccount = async () => {
   const loginEmail = txtEmail.value;
   const loginPassword = txtPassword.value;
+  const secondPass = secTxtPassword.value;
 
   try {
-    const userCredential = await createUserWithEmailAndPassword(
-      auth,
-      loginEmail,
-      loginPassword
-    );
-    console.log(userCredential.user);
+    if (isDetailsAreValid(loginEmail, loginPassword, secondPass)) {
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        loginEmail,
+        loginPassword
+      );
+      console.log("User succeeded to sign up");
+    }
   } catch (error) {
     console.log(error);
-    // showErrorLogin();
-    // showLoginError(error);
   }
 };
+
+function isDetailsAreValid(email, firstPass, secondPass) {
+  if (
+    isEmailValid(email) &&
+    isPasswordValid(firstPass) &&
+    compareFirstAndSecondPw(firstPass, secondPass)
+  ) {
+    return true;
+  }
+  return false;
+}
 
 btnSignUp.addEventListener("click", createAccount);

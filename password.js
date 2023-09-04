@@ -18,13 +18,17 @@ function showAndHidePassword(id) {
  * else errorMassageNotEqualsTwoPw = password are not match
  */
 function compareFirstAndSecondPw(pw1, pw2) {
-  // TODO need to check why it's not jump an Error
   let errorElement = document.getElementById("errorMassageNotEqualsTwoPw");
-  let pw1Val = document.getElementById(pw1).value;
-  let pw2Val = document.getElementById(pw2).value;
-  if (pw1Val != pw2Val) {
-    if(pw2Val.length > 0){
+  let pw1Val = "";
+  if (pw1 === "pw1") {
+    pw1Val = document.getElementById(pw1).value;
+  } else {
+    pw1Val = pw1;
+  }
+  if (pw1Val != pw2) {
+    if (pw2.length > 0) {
       errorElement.innerHTML = "הסיסמאות אינן תואמות <br>";
+      console.log("password are not equal");
       return false;
     }
   } else {
@@ -43,12 +47,12 @@ function compareFirstAndSecondPw(pw1, pw2) {
  * Checking if all the boolean value equal to true, if yes
  */
 function isPasswordValid(pass) {
-  let firstPw = document.getElementById(pass).value;
+  // let firstPw = document.getElementById(pass).value;
   let errorPassNotValid = document.getElementById("passwordNotValid");
-  let isLengthValid = isLengthOfPasswordValid(firstPw);
-  let isContainUpper = isPasswordContainUpperCase(firstPw);
-  let isContainLower = isPasswordContainLowerCase(firstPw);
-  let isContainSpace = isThereNoSpace(firstPw);
+  let isLengthValid = isLengthOfPasswordValid(pass);
+  let isContainUpper = isPasswordContainUpperCase(pass);
+  let isContainLower = isPasswordContainLowerCase(pass);
+  let isContainSpace = isThereNoSpace(pass);
   if (isContainUpper && isContainLower && isContainSpace && isLengthValid) {
     errorPassNotValid.innerHTML = "";
     return true;

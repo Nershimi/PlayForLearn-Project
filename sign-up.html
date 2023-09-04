@@ -35,7 +35,7 @@
           size="42"
           id="username"
           value
-          onkeyup="isEmailValid('username')"
+          onkeyup="isEmailValid(value)"
           placeholder="example@domain.com"
           autofocus
         />
@@ -48,7 +48,7 @@
           size="42"
           id="pw1"
           value
-          onkeyup="isPasswordValid('pw1')"
+          onkeyup="isPasswordValid(value)"
         />
         <button onclick="showAndHidePassword('pw1')">הצג/הסתר</button>
       </div>
@@ -62,7 +62,7 @@
           name="pw2"
           id="pw2"
           value
-          onkeyup="compareFirstAndSecondPw('pw1','pw2')"
+          onkeyup="compareFirstAndSecondPw('pw1' ,value)"
         />
       </div>
 

@@ -6,8 +6,7 @@
  * to the user saying the email is not valid.
  */
 function isEmailValid(email) {
-  let userEmail = document.getElementById(email).value;
-  let isEmailCorrect = mailFormatValid(userEmail);
+  let isEmailCorrect = mailFormatValid(email);
   let errorEmailNotCorrect = document.getElementById("emailNotValid");
   errorEmailNotCorrect.innerHTML = "כתובת מייל לא חוקית <br>";
   if (isEmailCorrect) {
@@ -15,6 +14,7 @@ function isEmailValid(email) {
     return true;
   } else {
     errorEmailNotCorrect.style.display = "block";
+    console.log("email is not valid");
     return false;
   }
 }
