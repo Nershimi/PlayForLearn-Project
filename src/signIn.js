@@ -1,7 +1,13 @@
 import {
   getAuth,
   signInWithEmailAndPassword,
-} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+  onAuthStateChanged,
+} from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
+// import {
+//   getAuth,
+//   signInWithEmailAndPassword,
+//   onAuthStateChanged,
+// } from "firebase/auth";
 
 const auth = getAuth();
 
@@ -20,7 +26,7 @@ const loginEmailPassword = async () => {
       loginEmail,
       loginPassword
     );
-    console.log(userCredential.user);
+    console.log("User is login");
   } catch (error) {
     console.log(error);
     showErrorLogin();
@@ -28,8 +34,25 @@ const loginEmailPassword = async () => {
   }
 };
 
-function showErrorLogin(){
-    errorSpan.style = "display: block"
+function showErrorLogin() {
+  errorSpan.style = "display: block";
 }
 
 btnLogin.addEventListener("click", loginEmailPassword);
+
+const monitorAuthState = async () => {
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      console.log(user);
+      showHomePage();
+    } else {
+      showErrorLogin();
+    }
+  });
+};
+
+monitorAuthState();
+
+function showHomePage() {
+  window.location.href = "HomePageScreen.html";
+}

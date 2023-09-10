@@ -1,12 +1,22 @@
+// import {
+//   GoogleAuthProvider,
+//   getAuth,
+//   signInWithPopup,
+// } from "firebase/auth";
+import { firebaseConfig } from "./index.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
 import {
   GoogleAuthProvider,
   getAuth,
   signInWithPopup,
-} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+} from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
 
 const provider = new GoogleAuthProvider();
 
-const auth = getAuth();
+const firebaseApp = initializeApp(firebaseConfig);
+
+
+const auth = getAuth(firebaseApp);
 const signInButton = document.getElementById("googleLogIn");
 
 signInButton.addEventListener("click", () => signInWithPopup(auth, provider))

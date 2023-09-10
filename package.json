@@ -2,9 +2,10 @@
   "name": "playforlearn",
   "version": "1.0.0",
   "description": "This project aims to get people at university to learn definitions using card games.",
-  "main": "index.js",
+  "main": "./index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
   },
   "devDependencies": {
     "webpack": "^5.88.2",
-    "webpack-cil": "^0.0.1-security"
+    "webpack-cil": "^0.0.1-security",
+    "webpack-cli": "^5.1.4"
   }
 }

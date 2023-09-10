@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script async src="PlayForLearn/password.js"></script>
-    <script type="module" src="/index.js"></script>
-    <script type="module" src="/GoogleAuth.js"></script>
-    <script type="module" src="/signIn.js"></script>
+    <script async src="password.js"></script>
+    <script async type="module" src="src/initializeApp.js"></script>
+    <script async type="module" src="src/GoogleAuth.js"></script>
+    <script async type="module" src="src/signIn.js"></script>
     <title>מסך התחברות - משחקים כדי ללמוד</title>
     <style>
       body {
@@ -16,22 +16,21 @@
     </style>
   </head>
   <body>
-    <br />
     <a href="PlayForLearn/sign-in.html">
-      <h2>משחקים כדי ללמוד</h2>
+      <h1>משחקים כדי ללמוד</h1>
     </a>
 
     <div>
       <div>
+        <span id="errorLogin" style="display: none"
+          >שם משתמש או סיסמה אינם נכונים</span
+        >
         <h4>אמייל</h4>
         <input type="email" size="42" name="username" id="username" value />
         <h4>סיסמה</h4>
         <input type="password" size="42" id="userPw" value />
         <button onclick="showAndHidePassword('userPw')">הצג/הסתר</button>
         <button type="submit" id="buttonLogin">התחברות</button>
-        <span id="errorLogin" style="display: none"
-          >שם משתמש או סיסמה אינם נכונים</span
-        >
       </div>
       <div>
         <button id="googleLogIn">sign-up with Goggle</button>
@@ -39,12 +38,12 @@
       </div>
       <div>
         <td>
-          <a href="PlayForLearn/ResetPassword.html">
+          <a href="ResetPassword.html">
             <button>שחכתי סיסמה</button>
           </a>
         </td>
         <td>
-          <a href="PlayForLearn/sign-up.html">
+          <a href="sign-up.html">
             <button type="button">הרשמה לאתר</button>
           </a>
         </td>
