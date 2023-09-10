@@ -9,6 +9,7 @@
     <script async src="password.js"></script>
     <script async src="DateOfUser.js"></script>
     <script async src="ValidateEmail.js"></script>
+    <!-- <script async type="module" src="src/setUserDetails.js"></script> -->
     <title>מסך הרשמה - משחקים כדי ללמוד</title>
     <style>
       body {
@@ -71,7 +72,7 @@
         <input
           type="text"
           size="42"
-          name="firstName"
+          id="firstName"
           value
           placeholder="שם פרטי"
         />
@@ -82,12 +83,16 @@
         <input
           type="text"
           size="42"
-          name="lastName"
+          id="lastName"
           value
           placeholder="שם משפחה"
         />
       </div>
       <div>
+        <div>
+          <h4>תאריך לידה</h4>
+          <input type="date" id="birthday">
+        </div>
         <button id="buttonCreateAccount">צור משתמש</button>
       </div>
     </div>
