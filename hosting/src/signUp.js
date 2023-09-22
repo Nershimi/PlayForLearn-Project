@@ -1,12 +1,10 @@
-// import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import {
   getAuth,
   createUserWithEmailAndPassword,
 } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
-import {firebaseConfig } from "./index.js"
-import { setUserDetails } from "./setUserDetails.js";
+import { firebaseConfig } from "./index.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
 const firebaseApp = initializeApp(firebaseConfig);
-
 
 const auth = getAuth(firebaseApp);
 const btnSignUp = document.getElementById("buttonCreateAccount");
@@ -29,7 +27,6 @@ const createAccount = async () => {
         loginEmail,
         loginPassword
       );
-      setUserDetails(loginEmail, first, last, birthday);
       console.log("User succeeded to sign up");
     }
   } catch (error) {
